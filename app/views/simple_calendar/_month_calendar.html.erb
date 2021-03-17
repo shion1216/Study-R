@@ -1,0 +1,45 @@
+<!--このページが表示されてる-->
+<div class="simple-calendar">
+  <div class="calendar-heading background-color center">
+    <%= link_to t('simple_calendar.previous', default: 'Previous'), calendar.url_for_previous_view,class: 'calendar-heading-btn' %>
+    <span class="calendar-title"><%= t('date.month_names')[start_date.month] %> <%= start_date.year %></span>
+    <%= link_to t('simple_calendar.next', default: 'Next'), calendar.url_for_next_view,class: 'calendar-heading-btn' %>
+  </div>
+
+    <table class="table margin-bottom-0 calendar-color">
+      <!--ここが曜日-->
+      <thead class="calendar-color">
+        <tr>
+          <% date_range.slice(0, 7).each do |day| %>
+            <th><%= t('date.abbr_day_names')[day.wday] %></th>
+          <% end %>
+        </tr>
+      </thead>
+  
+      <!--ここが日にち-->
+      <tbody class="calendar-color">
+        <% date_range.each_slice(7) do |week| %>
+          <tr>
+            <% week.each do |day| %>
+              <% test = Calendar.where(user_id: current_user.id, start_time: day) %>
+              <% if test.present? && test.all? { |value| value.learning_time >= value.target_time } %>
+                <% calendar_class = calendar.td_classes_for(day).push("bg_red") %>
+              <% else %>
+                <% calendar_class = calendar.td_classes_for(day) %>
+              <% end %>
+
+              <%= content_tag :td, class: calendar_class do %>
+                <% if defined?(Haml) && respond_to?(:block_is_haml?) && block_is_haml?(passed_block) %>
+                  <% capture_haml(day, sorted_events.fetch(day, []), &passed_block) %>
+                <% else %>
+                  <% passed_block.call day, sorted_events.fetch(day, []) %>
+                <% end %>
+              <% end %>
+              
+            <% end %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  
+</div>

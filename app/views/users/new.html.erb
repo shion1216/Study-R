@@ -1,0 +1,29 @@
+<div class="users-new-wrapper background-color">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-3 col-md-6">
+        <h1 class="center">新規登録</h1>
+        <%= form_for @user do |f| %>
+          <div class="form-group">
+            <%= f.label :名前, class: 'target-font' %>
+            <%= f.text_field :name,class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :メールアドレス, class: 'target-font' %>
+            <%= f.text_field :email,class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :パスワード, class: 'target-font' %>
+            <%= f.password_field :password,class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :パスワード確認, class: 'target-font' %>
+            <%= f.password_field :password_confirmation,class: 'form-control' %>
+          </div>
+          
+          <%= f.submit "登録",class: 'btn-block btn' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

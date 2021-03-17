@@ -1,0 +1,31 @@
+<div class="calendars-show-wrapper background-color height-max">
+  <div class="container">
+    <div class="row">
+      <div class="month-day calendar-show-size">
+        <%= @calendar.start_time.month %>月<%= @calendar.start_time.day %>日
+      </div>
+      <div class="col-md-offset-4 col-md-4">
+        <div class="work-content calendar-show-size">
+          学習内容：<%= @calendar.work_content %>
+        </div>
+        <div class="target-time calendar-show-size">
+          目標時間：<%= @calendar.target_time %>
+        </div>
+        <div class="learning-time calendar-show-size">
+          <% if @calendar.learning_time == 0 %>
+          学習時間：未入力
+          <% else %>
+          学習時間：<%= @calendar.learning_time %>
+          <% end %>
+        </div>
+        <%= link_to "学習時間を追加",edit_calendar_path,class: 'btn btn-calendar-show' %>
+        <%= link_to "削除", calendar_path, method: :delete,class: 'delete' %>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+

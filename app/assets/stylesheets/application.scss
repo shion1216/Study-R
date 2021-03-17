@@ -1,0 +1,10 @@
+/*
+ *= require simple_calendar
+ *= require_tree .
+ *= require_self
+ */
+ 
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@import 'custom';

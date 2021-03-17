@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portfolio</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <% if logged_in? %>
+        <div class="header-left">
+          <%= link_to("Study R",calendars_path,{class: 'header-btn'})%>
+        </div>
+        <div class="header-right">
+          <%= link_to("ログアウト",logout_path, {method: :delete,class: 'header-btn'}) %>
+        </div>
+        <div class="header-right">
+          <%= link_to(current_user.name,user_path(current_user.id),{class: 'header-btn'}) %>
+        </div>
+      <% else %>
+        <div class="header-left">
+          <%= link_to("Study R",root_path,{class: 'header-btn'})%>
+        </div>
+        <div class="header-right">
+          <%= link_to("新規登録",new_user_path,{class: 'header-btn'})%>
+        </div>
+        <div class="header-right">
+          <%= link_to("ログイン",login_path,{class: 'header-btn'})%>
+        </div>
+      <% end %>
+    </header>
+    
+    
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
+    <% end %>
+    
+    
+    <%= yield %>
+    
+    <script>
+      $(function(){
+        $(".alert").fadeOut(5000);
+      });
+    </script>  
+  
+  </body>
+</html>

@@ -1,0 +1,269 @@
+html{
+  height: 100%;
+}
+body{
+  height: 100%;
+}
+
+// 共通部分
+.background-color{
+  background-color: #FAFAFA;
+}
+
+.alert {
+  margin-bottom: 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+}
+
+.height-max{
+  height: 100%;
+  padding-top: 110px;
+}
+
+
+// ヘッダー部分
+header{
+  height: 70px;
+  width: 100%;
+  background-color: #FFBF00;
+  font-size: 24px;
+  z-index: 1;
+  position: absolute;
+}
+
+.header-left{
+  float: left;
+  line-height: 70px;
+  margin-left: 50px;
+}
+
+.header-right{
+  float: right;
+  line-height: 70px;
+  margin-right: 50px;
+}
+
+.header-btn{
+  color: #000000;
+  padding: 20px 20px;
+}
+
+// トップ画面
+.home-top-wrapper{
+  background-image: image-url('bindung-610196_1920.jpg');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.center{
+  text-align: center;
+}
+
+.btn{
+  font-size:20px;
+  border: 1px solid #000000;
+  padding: 25px 0;
+  // color: #000000;
+  text-align: center;
+  width: 100%;
+  background-color: #E6E6E6;
+}
+
+.container h1{
+  margin-top: 130px;
+  font-size: 50px;
+}
+
+.home-title{
+  font-family: Mv Boli;
+  margin-top: 65px;
+  font-size: 160px;
+  font-weight: bold;
+  color: #FFBF00;
+  text-shadow: 
+  1px 0 0 black,
+  -1px 0 0 black,
+  0 1px 0 black,
+  0 -1px 0 black
+  ;
+}
+
+.container h2{
+  margin-top: 90px;
+  font-weight: bold;
+  font-size: 50px;
+  margin-bottom: 170px;
+  color: #FFBF00;
+  text-shadow: 
+  1px 0 0 black,
+  -1px 0 0 black,
+  0 1px 0 black,
+  0 -1px 0 black
+  ;
+}
+
+.home-btn{
+  // background-color: rgba(0,0,0,0.0);
+  background-color: #FFFFFF;
+  border: 2px solid #000000;
+  font-size: 25px;
+  color: #000000;
+}
+
+// 新規登録ページ
+.users-new-wrapper{
+  padding-top: 58px;
+  height: 100%;
+}
+
+.form-control{
+  height: 50px;
+  margin-bottom: 35px;
+}
+
+// ユーザー
+.user-show-title{
+  font-size: 58px;
+  padding-bottom: 50px;
+  padding-top: 48px;
+}
+
+.user-show-size{
+  font-size: 40px;
+  padding-bottom: 25px;
+}
+
+.btn-user-show{
+  font-size: 25px;
+  color: black;
+  margin-top:50px;
+}
+
+// カレンダー
+.calendars-index-title{
+  margin-bottom: 70px;
+}
+
+.calendars-target-month-wrapper{
+  padding-top: 58px;
+  height: 100%;
+}
+
+.calendar-title{
+  font-size: 23px;
+  padding: 0 20px;
+}
+
+.target-btn{
+  margin-top: 80px;
+}
+
+.calendar-link{
+  float: right;
+}
+
+.margin-bottom-0{
+  margin-bottom: 0;
+}
+
+.padding-top-20{
+  padding-top: 20px;
+}
+
+.targets-btn{
+  margin-top: 150px;
+  color: #000000;
+}
+
+.calendar-color{
+  background-color: #FFFFFF;
+}
+
+.calendar-font-size{
+  font-size: 20px;
+}
+
+.black{
+  color: black;
+}
+
+
+.calendar-heading{
+  margin-bottom: 70px;
+  padding-top: 90px;
+}
+
+.calendar-heading span{
+  font-size: 60px;
+}
+
+.calendar-heading-btn{
+  font-size: 20px;
+  padding: 0 30px;
+}
+
+.bg_red{
+  background-color: #D8F6CE;
+}
+
+.calendar-color{
+  background-color: #ffffff;
+}
+
+.wday-0{
+  color: red;
+}
+.wday-6{
+  color: #013ADF;
+}
+
+td{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.calendar-font-size{
+  font-weight: normal;
+}
+
+.time-select{
+  font-size: x-large;
+}
+
+
+
+.target-font{
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.calendar-show-size{
+  font-size: 40px;
+  padding-bottom: 25px;
+}
+
+.month-day{
+  font-size: 58px;
+  padding-bottom: 50px;
+  padding-top: 48px;
+}
+
+.btn-calendar-show{
+  font-size: 25px;
+  color: black;
+  margin-top:50px;
+}
+
+.delete{
+  font-size: 20px;
+  padding-top: 25px;
+  float: right;
+}
+
+.today{
+  background-color: #A9E2F3 !important;
+}

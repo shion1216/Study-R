@@ -1,0 +1,25 @@
+<div class="calendars-index-wrapper height-max background-color">
+  <div class="background-color">
+    <!--<div class="container">-->
+    <!--  <h1 class="center calendars-index-title">カレンダー</h1>-->
+    <!--</div>-->
+  </div>
+  
+  <%= month_calendar events: @calendars do |date, calendars| %>
+    <%= date.day %>
+        
+    <% calendars.each do |calendar| %>
+      <div><%= link_to calendar.work_content, calendar, class: 'black calendar-font-size' %></div>
+    <% end %>
+  <% end %>
+  
+  <div class="container-fluid padding-top-20 background-color">
+    <div class="row">
+      <div class="col-md-offset-4 col-md-4">
+        <div class="targets calendar-link btn">
+          <%= link_to "目標時間を追加",calendar_targets_path,class: 'targets-btn' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

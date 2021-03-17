@@ -1,0 +1,25 @@
+<div class="target-wrapper background-color height-max">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-3 col-md-6">
+        <h1 class="center">目標時間を追加</h1>
+        <%= form_for @calendar do |f| %>
+          <div class="form-group">
+            <%= f.label :学習内容, class: 'target-font' %>
+            <%= f.text_field :work_content, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :目標時間, class: 'target-font' %>
+            <%= f.text_field :target_time, class: 'form-control' %>
+          </div>
+          <div class="form-group time-select">
+            <%= f.label :開始日, class: 'target-font' %>
+            <%= f.date_select :start_time ,{use_month_numbers: true} %>
+          </div>
+          
+          <%= f.submit "追加",class: 'btn-block btn target-btn' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="user-show-wrapper background-color height-max">
+    <div class="container">
+      <div class="row">
+        <div class="user-show-title">
+          マイページ
+        </div>
+        <div class="col-md-offset-3 col-md-6">
+          <div class="user-name user-show-size">
+            ユーザー名　　：<%= @user.name %>
+          </div>
+          <div class="user-email user-show-size">
+            メールアドレス：<%= @user.email %>
+          </div>
+          <div class="total-time user-show-size">
+            総学習時間　　：<%= @total_time %>時間
+          </div>
+        </div>
+        <div class="col-md-offset-4 col-md-4">
+          
+          <%= link_to "編集",edit_user_path,class: 'btn btn-user-show' %>
+        </div>
+      </div>
+    </div>
+</div>
