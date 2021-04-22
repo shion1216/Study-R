@@ -19,7 +19,7 @@
           <%= link_to("ログアウト",logout_path, {method: :delete,class: 'header-btn'}) %>
         </div>
         <div class="header-right">
-          <%= link_to(current_user.name,user_path(current_user.id),{class: 'header-btn'}) %>
+          <%= link_to("マイページ",user_path(current_user.id),{class: 'header-btn'}) %>
         </div>
       <% else %>
         <div class="header-left">
