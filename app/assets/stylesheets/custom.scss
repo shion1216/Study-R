@@ -66,15 +66,16 @@ header{
 .btn{
   font-size:15px;
   border: 1px solid #000000;
-  padding: 18px 0;
+  padding: 8px 0;
   // color: #000000;
   text-align: center;
   width: 100%;
   background-color: #E6E6E6;
+  margin-top: 40px;
 }
 
 .container h1{
-  margin-top: 130px;
+  margin-top: 40px;
   font-size: 30px;
 }
 
@@ -85,10 +86,10 @@ header{
   font-weight: bold;
   color: #FFBF00;
   text-shadow: 
-  1px 0 0 black,
-  -1px 0 0 black,
-  0 1px 0 black,
-  0 -1px 0 black
+  1px 0 0 #00008B,
+  -1px 0 0 #00008B,
+  0 1px 0 #00008B,
+  0 -1px 0 #00008B;
   ;
 }
 
@@ -99,46 +100,46 @@ header{
   margin-bottom: 120px;
   color: #FFBF00;
   text-shadow: 
-  1px 0 0 black,
-  -1px 0 0 black,
-  0 1px 0 black,
-  0 -1px 0 black
+  1px 0 0 #00008B,
+  -1px 0 0 #00008B,
+  0 1px 0 #00008B,
+  0 -1px 0 #00008B
   ;
 }
 
 .home-btn{
   // background-color: rgba(0,0,0,0.0);
   background-color: #FFFFFF;
-  border: 2px solid #000000;
+  border: 2px solid #00008B;
   font-size: 25px;
-  color: #000000;
+  color: black;
 }
 
 // 新規登録ページ
 .users-new-wrapper{
-  padding-top: 58px;
+  padding-top: 60px;
   height: 100%;
 }
 
 .form-control{
-  height: 50px;
-  margin-bottom: 35px;
+  height: 35px;
+  margin-bottom: 25px;
 }
 
 // ユーザー
 .user-show-title{
-  font-size: 58px;
+  font-size: 30px;
   padding-bottom: 50px;
-  padding-top: 48px;
+  padding-top: 30px;
 }
 
 .user-show-size{
-  font-size: 40px;
+  font-size: 20px;
   padding-bottom: 25px;
 }
 
 .btn-user-show{
-  font-size: 25px;
+  font-size: 20px;
   color: black;
   margin-top:50px;
 }
@@ -193,16 +194,16 @@ header{
 
 
 .calendar-heading{
-  margin-bottom: 70px;
-  padding-top: 90px;
+  margin-bottom: 30px;
+  padding-top: 20px;
 }
 
 .calendar-heading span{
-  font-size: 60px;
+  font-size: 30px;
 }
 
 .calendar-heading-btn{
-  font-size: 20px;
+  font-size: 16px;
   padding: 0 30px;
 }
 
@@ -237,29 +238,29 @@ td{
 
 
 .target-font{
-  font-size: 25px;
+  font-size: 15px;
   font-weight: 500;
 }
 
 .calendar-show-size{
-  font-size: 40px;
+  font-size: 20px;
   padding-bottom: 25px;
 }
 
 .month-day{
-  font-size: 58px;
+  font-size: 30px;
   padding-bottom: 50px;
-  padding-top: 48px;
+  padding-top: 30px;
 }
 
 .btn-calendar-show{
-  font-size: 25px;
+  font-size: 20px;
   color: black;
   margin-top:50px;
 }
 
 .delete{
-  font-size: 20px;
+  font-size: 15px;
   padding-top: 25px;
   float: right;
 }
