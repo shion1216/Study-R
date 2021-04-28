@@ -2,7 +2,6 @@ class CalendarsController < ApplicationController
   before_action :authenticate_user,{only:[:index, :new, :show, :edit, :month, :target, :months]}
   
   def index
-    # @calendars = Calendar.all
     @calendars = Calendar.where(user_id: current_user.id)
     @calendar = Calendar.all
   end

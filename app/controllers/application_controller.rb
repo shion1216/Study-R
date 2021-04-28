@@ -18,4 +18,11 @@ class ApplicationController < ActionController::Base
       redirect_to root_path
     end
   end
+  
+  def  logged_out
+    if current_user != nil
+      flash[:notice] = "ログアウトしてください"
+      redirect_to calendars_path
+    end
+  end
 end
