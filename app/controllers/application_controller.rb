@@ -14,14 +14,14 @@ class ApplicationController < ActionController::Base
   
   def authenticate_user
     if current_user == nil
-      flash[:notice] = "ログインしてください"
+      flash[:danger] = "ログインしてください"
       redirect_to root_path
     end
   end
   
   def  logged_out
     if current_user != nil
-      flash[:notice] = "ログアウトしてください"
+      flash[:danger] = "ログアウトしてください"
       redirect_to calendars_path
     end
   end
