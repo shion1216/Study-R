@@ -5,7 +5,7 @@
         <h1 class="center">新規登録</h1>
         <%= form_for @user do |f| %>
           <div class="form-group">
-            <%= f.label :名前, class: 'target-font' %>
+            <%= f.label :名前（１５文字以下）, class: 'target-font' %>
             <%= f.text_field :name,class: 'form-control' %>
           </div>
           <div class="form-group">

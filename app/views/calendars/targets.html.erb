@@ -4,12 +4,16 @@
       <h1 class="center">追加方法を選択してください</h1>
       <div class="col-md-offset-2 col-md-4">
         <div class="target btn targets-btn">
-          <%= link_to "一日ごとに追加",calendar_target_path,class: 'targets-btn' %>
+          <%= link_to calendar_target_path,class: 'targets-btn' do %>
+            <div>一日ごとに追加</div>
+          <% end %>
         </div>
       </div>
       <div class="col-md-4">
         <div class="target-month btn targets-btn">
-          <%= link_to "一か月ごと追加",calendar_target_month_path,class: 'targets-btn' %>
+          <%= link_to calendar_target_month_path,class: 'targets-btn' do %>
+            <div>一か月ごと追加</div>
+          <% end %>
         </div>
       </div>
     </div>
