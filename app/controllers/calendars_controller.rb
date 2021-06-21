@@ -62,6 +62,7 @@ class CalendarsController < ApplicationController
     )
     start_month=start_time.all_month.to_a
     
+    
     start_month.each do |date|
       if date.sunday? || date.saturday?
         @calendar = current_user.calendars.create(work_content: calendar_month_params["work_content"],target_time: calendar_month_params["target_time_2"],start_time: date)
@@ -72,11 +73,12 @@ class CalendarsController < ApplicationController
     flash[:success] = "目標時間の追加完了"
     redirect_to calendars_path
     
+    
   end
   
   private
   def calendar_params
-    params.require(:calendar).permit(:work_content, :target_time, :learning_time, :start_time)
+    params.require(:calendar).permit(:work_content, :target_time, :learning_time, :start_time, :memo)
   end
   
   def calendar_month_params

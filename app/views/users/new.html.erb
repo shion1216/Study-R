@@ -3,21 +3,26 @@
     <div class="row">
       <div class="col-md-offset-3 col-md-6">
         <h1 class="center">新規登録</h1>
+        <h4 class="center">※すべて必須です</h4>
         <%= form_for @user do |f| %>
+          <%= render 'layouts/error_messages', model: f.object %>
           <div class="form-group">
-            <%= f.label :名前（１５文字以下）, class: 'target-font' %>
+            <%= f.label :名前, class: 'target-font' %>
+            <div>１５文字以下</div>
             <%= f.text_field :name,class: 'form-control' %>
           </div>
           <div class="form-group">
             <%= f.label :メールアドレス, class: 'target-font' %>
+            <div>実際のメールアドレスを入力ください</div>
             <%= f.text_field :email,class: 'form-control' %>
           </div>
           <div class="form-group">
             <%= f.label :パスワード, class: 'target-font' %>
+            <div>半角英大文字・半角英子文字・数字を全て含む、８～３２文字</div>
             <%= f.password_field :password,class: 'form-control' %>
           </div>
           <div class="form-group">
-            <%= f.label :パスワード確認, class: 'target-font' %>
+            <%= f.label :確認用パスワード, class: 'target-font' %>
             <%= f.password_field :password_confirmation,class: 'form-control' %>
           </div>
           

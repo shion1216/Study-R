@@ -2,23 +2,24 @@
   <div class="container">
     <div class="row">
       <div class="col-md-offset-3 col-md-6">
-        <h1 class="center">ユーザー名・メールアドレスを変更</h1>
+        <h1 class="center">ユーザー情報を変更</h1>
         <%= form_for @user do |f| %>
+          <%= render 'layouts/error_messages', model: f.object %>
           <div class="form-group">
-            <%= f.label :ユーザー名 %>
+            <%= f.label :名前, class: 'target-font'  %>
             <%= f.text_field :name,class: 'form-control' %>
           </div>
           <div class="form-group">
-            <%= f.label :メールアドレス %>
+            <%= f.label :メールアドレス, class: 'target-font' %>
             <%= f.text_field :email,class: 'form-control' %>
           </div>
           <div class="form-group">
-            <%= f.label :パスワード, class: 'target-font' %>
-            <%= f.password_field :password,class: 'form-control' %>
+            <%= f.label :パスワード, class: 'target-font'  %>
+            <%= f.password_field :password,class: 'form-control',placeholder: '既存のパスワード・新しいパスワードどちらでも可' %>
           </div>
           <div class="form-group">
-            <%= f.label :パスワード確認, class: 'target-font' %>
-            <%= f.password_field :password_confirmation,class: 'form-control' %>
+            <%= f.label :確認用パスワード, class: 'target-font'  %>
+            <%= f.password_field :password_confirmation,class: 'form-control',placeholder: '上と同じパスワードを入力してください' %>
           </div>
           <%= f.submit "変更する",class: 'btn-block btn target-btn' %>
         <% end %>

@@ -10,11 +10,13 @@
             </div>
             <div class="form-group">
               <%= f.label :平日の目標時間, class: 'target-font' %>
-              <%= f.text_field :target_time_1, class: 'form-control' %>
+              <div>※半角で入力してください</div>
+              <%= f.text_field :target_time_1, class: 'form-control',placeholder: '○○時間' %>
             </div>
             <div class="form-group">
               <%= f.label :土日の目標時間, class: 'target-font' %>
-              <%= f.text_field :target_time_2, class: 'form-control' %>
+              <div>※半角で入力してください</div>
+              <%= f.text_field :target_time_2, class: 'form-control',placeholder: '○○時間' %>
             </div>
             <div class="form-group time-select">
               <%= f.label :年月を選択, class: 'target-font' %>

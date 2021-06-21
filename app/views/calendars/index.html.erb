@@ -3,7 +3,9 @@
     <%= date.day %>
         
     <% calendars.each do |calendar| %>
-      <div><%= link_to calendar.work_content, calendar, class: 'black calendar-font-size' %></div>
+      <%= link_to calendar,class: 'black' do %>
+        <p><span class="pen">🖋</span><span class="calendar-font-size"><%= calendar.work_content.truncate(8)%></span></p>
+      <% end %>
     <% end %>
   <% end %>
   

@@ -9,16 +9,24 @@
           学習内容：<%= @calendar.work_content %>
         </div>
         <div class="target-time calendar-show-size">
-          目標時間：<%= @calendar.target_time %>
+          目標時間：<%= @calendar.target_time %>時間
         </div>
         <div class="learning-time calendar-show-size">
           <% if @calendar.learning_time == 0 %>
           学習時間：未入力
           <% else %>
-          学習時間：<%= @calendar.learning_time %>
+          学習時間：<%= @calendar.learning_time %>時間
           <% end %>
         </div>
-        <%= link_to "学習時間を追加",edit_calendar_path,class: 'btn btn-calendar-show' %>
+        <div class="calendar-show-size">
+          学習内容：<%= @calendar.memo %>
+        </div>
+        
+        <% if @calendar.learning_time == 0 %>
+          <%= link_to "学習時間を入力",edit_calendar_path,class: 'btn btn-calendar-show' %>
+        <% else %>
+          <%= link_to "学習時間を編集",edit_calendar_path,class: 'btn btn-calendar-show' %>
+        <% end %>
         <%= link_to "削除", calendar_path, method: :delete,class: 'delete' %>
       </div>
       

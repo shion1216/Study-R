@@ -1,9 +1,10 @@
 <!--このページが表示されてる-->
 <div class="simple-calendar">
   <div class="calendar-heading background-color center">
-    <%= link_to t('simple_calendar.previous', default: 'Previous'), calendar.url_for_previous_view,class: 'calendar-heading-btn' %>
-    <span class="calendar-title"><%= t('date.month_names')[start_date.month] %> <%= start_date.year %></span>
-    <%= link_to t('simple_calendar.next', default: 'Next'), calendar.url_for_next_view,class: 'calendar-heading-btn' %>
+    <%= link_to t('simple_calendar.previous', default: '前月'), calendar.url_for_previous_view,class: 'calendar-heading-btn' %>
+    <span class="calendar-title"><%= start_date.year %>年<%= t('date.month_names')[start_date.month] %> </span>
+    <%= link_to t('simple_calendar.next', default: '翌月'), calendar.url_for_next_view,class: 'calendar-heading-btn' %>
+
   </div>
 
     <table class="table margin-bottom-0 calendar-color">
